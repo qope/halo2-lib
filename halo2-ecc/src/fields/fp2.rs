@@ -1,5 +1,6 @@
 use super::{FieldChip, FieldExtConstructor, FieldExtPoint, PrimeFieldChip, Selectable};
 use crate::halo2_proofs::{arithmetic::Field, circuit::Value};
+use ff::PrimeField as ffPrimeField;
 use halo2_base::{
     gates::{GateInstructions, RangeInstructions},
     utils::{fe_to_biguint, value_to_option, PrimeField},
