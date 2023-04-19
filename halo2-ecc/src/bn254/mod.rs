@@ -7,11 +7,11 @@ use crate::{
 pub mod final_exp;
 pub mod pairing;
 
-type FpChip<F> = fp::FpConfig<F, Fq>;
-type FpPoint<'v, F> = CRTInteger<'v, F>;
-type FqPoint<'v, F> = FieldExtPoint<FpPoint<'v, F>>;
-type Fp2Chip<'a, F> = fp2::Fp2Chip<'a, F, FpChip<F>, Fq2>;
-type Fp12Chip<'a, F> = fp12::Fp12Chip<'a, F, FpChip<F>, Fq12, 9>;
+pub type FpChip<F> = fp::FpConfig<F, Fq>;
+pub type FpPoint<'v, F> = CRTInteger<'v, F>;
+pub type FqPoint<'v, F> = FieldExtPoint<FpPoint<'v, F>>;
+pub type Fp2Chip<'a, F> = fp2::Fp2Chip<'a, F, FpChip<F>, Fq2>;
+pub type Fp12Chip<'a, F> = fp12::Fp12Chip<'a, F, FpChip<F>, Fq12, 9>;
 
 #[cfg(test)]
 pub(crate) mod tests;
