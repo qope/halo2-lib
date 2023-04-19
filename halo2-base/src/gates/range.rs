@@ -15,7 +15,6 @@ use crate::{
         },
         poly::Rotation,
     },
-    utils::PrimeField,
 };
 use std::cmp::Ordering;
 

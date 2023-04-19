@@ -5,8 +5,7 @@ use super::{
 use crate::halo2_proofs::{
     circuit::Value,
     plonk::{
-        Advice, Assigned, Column, ConstraintSystem, FirstPhase, Fixed, SecondPhase, Selector,
-        ThirdPhase,
+        Advice, Column, ConstraintSystem, FirstPhase, Fixed, SecondPhase, Selector, ThirdPhase,
     },
     poly::Rotation,
 };

@@ -31,7 +31,7 @@ pub use halo2_proofs;
 pub use halo2_proofs_axiom as halo2_proofs;
 
 use halo2_proofs::{
-    circuit::{AssignedCell, Cell, Region, Value},
+    circuit::{Cell, Region, Value},
     plonk::{Advice, Assigned, Column, Fixed},
 };
 use rustc_hash::FxHashMap;
@@ -431,7 +431,7 @@ impl<'a, F: ScalarField> Context<'a, F> {
         column: Column<Advice>,
         #[cfg(feature = "display")] context_id: usize,
         row_offset: usize,
-        phase: u8,
+        _phase: u8,
     ) -> AssignedValue<'v, F> {
         match input {
             QuantumCell::Existing(acell) => {
@@ -569,7 +569,7 @@ pub struct AssignedPrimitive<'a, T: Into<u64> + Copy, F: ScalarField> {
     #[cfg(feature = "halo2-pse")]
     pub cell: Cell,
     #[cfg(feature = "halo2-pse")]
-    row_offset: usize,
+    _row_offset: usize,
     #[cfg(feature = "halo2-pse")]
     _marker: PhantomData<&'a F>,
 }
